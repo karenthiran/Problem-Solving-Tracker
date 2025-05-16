@@ -1,11 +1,9 @@
+import Login from "./components/login"
 
-function App() {
-
+export const App = () => {
   return (
-    <>
-      <div >hello</div>
-    </>
+    <div className="grid w-[100%] h-screen place-items-center bg-cyan-100">
+        <Login/>
+    </div>
   )
 }
-
-export default App
