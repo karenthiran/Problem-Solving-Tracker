@@ -1,12 +1,38 @@
-# React + Vite
+# 📘 DSA Diary – Problem Solving Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A personal web app to track, filter, and analyze your DSA (Data Structures & Algorithms) problem-solving journey across platforms like LeetCode, Codeforces, and more.
 
-Currently, two official plugins are available:
+---
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Add problems with title, link, platform, difficulty, and status
+- 📝 Take notes and tag topics (e.g., `dp`, `binary search`, etc.)
+- 📊 Visualize your progress with statistics and charts
+- 🔍 Filter and sort problems by platform, difficulty, or status
+- 🧠 Track daily streaks and problem-solving history
+- 🔐 (Optional) User authentication with Google Sign-In
+- ☁️ Hosted on Firebase / Vercel
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Frontend        | Backend / DB   | Hosting        | Other |
+|----------------|----------------|----------------|-------|
+| React + Tailwind CSS | Firebase Firestore | Firebase Hosting / Vercel | Chart.js / Recharts |
+
+---
+
+## 📸 Screenshots
+
+
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/problem-solving-tracker.git
+cd problem-solving-tracker
+npm install
+npm run dev
