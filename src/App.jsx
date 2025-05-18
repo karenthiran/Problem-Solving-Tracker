@@ -1,9 +1,10 @@
-import Login from "./components/login"
+import Dashboard from "./components/Dashboard"
 
 export const App = () => {
   return (
     <div>
-        <Login/>
+        {/* <Login/> */}
+        <Dashboard/>
     </div>
   )
 }
