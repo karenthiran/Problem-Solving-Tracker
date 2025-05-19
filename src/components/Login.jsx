@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import coverImage from '../assets/analyzing.jpg';
 import { quotes } from "../assets/quotes";
 import { auth } from '../firebase';
@@ -8,6 +9,7 @@ export const Login = () => {
   const [isLoginMode, setIsLoginMode] = useState(true);
   const [isquote, setIsQuote] = useState('');
   const [error, setError] = useState('');
+  const navigate=useNavigate();
 
   useEffect(() => {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -25,6 +27,7 @@ export const Login = () => {
       if (isLoginMode) {
         await signInWithEmailAndPassword(auth, email, password);
         console.log("User Logged in");
+        navigate('/dashboard')
       } else {
         const name = e.target.name.value;
         const confirmPassword = e.target.confirmPassword.value;
@@ -35,6 +38,7 @@ export const Login = () => {
 
         await createUserWithEmailAndPassword(auth, email, password);
         console.log("User Signed up");
+        navigate('/dashboard')
       }
     } catch (error) {
       console.error(error.message);
