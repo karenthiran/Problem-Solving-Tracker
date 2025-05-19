@@ -14,12 +14,12 @@ export const Solvedstatus = () => {
             <Card icon={<FaHourglassHalf/>} title="Pending" value="12"/>
             <Card icon={<FaTimesCircle/>} title="Unsolved" value="5"/>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
-            <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6 ">
+            <div className="bg-white p-4 rounded-lg shadow-md dark:bg-gray-900 dark:text-white">
                 <h3 className="text-lg font-semibold mb-4">Monthly Performance Overview</h3>
                 <Line data={dataLine}/>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow-md">
+            <div className="bg-white p-4 rounded-lg shadow-md dark:bg-gray-900 dark:text-white">
                 <h3 className="text-lg font-semibold">Question Difficulty Overview</h3>
                 <Bar data={dataBar}/>
             </div>
