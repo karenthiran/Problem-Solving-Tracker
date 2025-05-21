@@ -1,15 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import ThemeContextProvider from "../context/ThemeContextProvider";
 import Navbar from "./dashboardcomponents/NavBar";
 
 
-
 export const Problemtable = () => {
+    const navigate=useNavigate();
+    const handleAddProblemClick=()=>{
+        navigate('/addproblem');
+    }
+
     return (
         <ThemeContextProvider>
             <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
                 <Navbar />
                 <div className="flex w-full justify-end">
-                    <button className="mr-10 border border-white bg-white px-4 py-2">
+                    <button className="mr-10 border border-white bg-white px-4 py-2" onClick={handleAddProblemClick}>
                         Add Problem
                     </button>
                 </div>
