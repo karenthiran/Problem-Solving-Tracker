@@ -1,4 +1,4 @@
-import { Problemtable } from './components/Problemtable';
+import { Addproblem } from './components/Addproblem';
 
 export const App = () => {
   return (
@@ -11,7 +11,7 @@ export const App = () => {
     //   </Routes>
     // </Router>
     <div >
-      <Problemtable/>
+      <Addproblem/>
     </div>
   );
 };
