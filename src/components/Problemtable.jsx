@@ -14,7 +14,7 @@ export const Problemtable = () => {
             <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
                 <Navbar />
                 <div className="flex w-full justify-end">
-                    <button className="mr-10 border border-white bg-white px-4 py-2" onClick={handleAddProblemClick}>
+                    <button className="mr-10 border border-white bg-white px-4 py-2 hover:bg-gray-200" onClick={handleAddProblemClick}>
                         Add Problem
                     </button>
                 </div>
