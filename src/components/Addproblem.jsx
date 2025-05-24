@@ -1,5 +1,6 @@
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
+import Select from "react-dropdown-select";
 import { useNavigate } from "react-router-dom";
 import ThemeContextProvider from "../context/ThemeContextProvider";
 import { db } from "../firebase";
@@ -19,12 +20,47 @@ export const Addproblem = () => {
         topics: [],
     });
 
+    const topicList = [
+        { id: "arrays", name: "Arrays" },
+        { id: "string", name: "String" },
+        { id: "math", name: "Math" },
+        { id: "dynamic-programming", name: "Dynamic Programming" },
+        { id: "linked-list", name: "Linked List" },
+        { id: "binary-tree", name: "Binary Tree" },
+        { id: "graph", name: "Graph" },
+        { id: "sorting", name: "Sorting" },
+        { id: "searching", name: "Searching" },
+        { id: "greedy", name: "Greedy" },
+        { id: "recursion", name: "Recursion" },
+        { id: "backtracking", name: "Backtracking" },
+        { id: "hashing", name: "Hashing" },
+        { id: "stack", name: "Stack" },
+        { id: "queue", name: "Queue" },
+        { id: "heap", name: "Heap" },
+        { id: "bit-manipulation", name: "Bit Manipulation" },
+        { id: "heap", name: "Heap" },
+        { id: "matrix", name: "Matrix" },
+        { id: "binary-search", name: "Binary Search" },
+        { id: "two-pointer", name: "Two Pointer" },
+        { id: "sliding-window", name: "Sliding Window" },
+        { id: "trie", name: "Trie" },
+        { id: "segment-tree", name: "Segment Tree" },
+    ];
+
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
+        const { name, value, selectedOptions } = e.target;
+        if (name === "topics") {
+            const selectedValues = Array.from(selectedOptions.map((option) => option.value));
+            setFormData((prevData) => ({
+                ...prevData,
+                [name]: selectedValues,
+            }));
+        } else {
+            setFormData((prevData) => ({
+                ...prevData,
+                [name]: value,
+            }));
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -172,47 +208,31 @@ export const Addproblem = () => {
                                     <option value="solved">Solved</option>
                                     <option value="attempted">Attempted</option>
                                     <option value="unsolved">Unsolved</option>
-                                    
                                 </select>
                             </div>
-                            <div className="w-2/3 relative z-10">
+                            <div className="relative z-10 w-2/3">
                                 <label className="mb-2 block text-gray-900 dark:text-gray-100">
                                     Problem Topics
                                 </label>
-                                <select
-                                    className="w-full rounded-lg border border-black p-2 hover:bg-slate-200 focus:bg-slate-200"
+                                <div>
+                                    <Select
+                                    className="w-full rounded-lg border border-black p-2 hover:bg-slate-200 focus:bg-slate-200 bg-white"
                                     name="topics"
+                                    options={topicList}
+                                    labelField="name"
+                                    valueField="id"
                                     required
+                                    multi
                                     value={formData.topics}
-                                    onChange={handleChange}
-                                >
-                                    <option value="">Topics</option>
-                                    <option value="arrays">Arrays</option>
-                                    <option value="string">String</option>
-                                    <option value="math">Math</option>
-                                    <option value="dynamic-programming">Dynamic Programming</option>
-                                    <option value="linked-list">Linked List</option>
-                                    <option value="binary-tree">Binary Tree</option>
-                                    <option value="graph">Graph</option>
-                                    <option value="sorting">Sorting</option>
-                                    <option value="searching">Searching</option>
-                                    <option value="greedy">Greedy</option>
-                                    <option value="recursion">Recursion</option>
-                                    <option value="backtracking">Backtracking</option>
-                                    <option value="hashing">Hashing</option>
-                                    <option value="stack">Stack</option>
-                                    <option value="queue">Queue</option>
-                                    <option value="heap">Heap</option>
-                                    <option value="bit-manipulation">Bit Manipulation</option>
-                                    <option value="heap">Heap</option>
-                                    <option value="matrix">Matrix</option>
-                                    <option value="binary-search">Binary Search</option>
-                                    <option value="two-pointer">Two Pointer</option>
-                                    <option value="sliding-window">Sliding Window</option>
-                                    <option value="trie">Trie</option>
-                                    <option value="segment-tree">Segment Tree</option>
-                                    <option value="segment-tree">Segment Tree</option>
-                                </select>
+                                    onChange={(selected)=>{
+                                        setFormData((prevData)=>({
+                                            ...prevData,
+                                            topics:selected.map((item=>item.id))
+                                        }));
+                                    }}
+                                    color="brown"
+                                ></Select>
+                                </div>
                             </div>
                         </div>
                     </div>
