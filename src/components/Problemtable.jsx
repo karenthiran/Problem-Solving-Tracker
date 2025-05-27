@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import ThemeContextProvider from "../context/ThemeContextProvider";
 import Navbar from "./dashboardcomponents/NavBar";
+import { Sidebar } from "./dashboardcomponents/Sidebar";
 
 
 export const Problemtable = () => {
@@ -11,7 +12,10 @@ export const Problemtable = () => {
 
     return (
         <ThemeContextProvider>
-            <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+            <div className="flex">
+                <Sidebar/>
+            
+            <div className="h-full grow bg-gray-100 text-gray-900 lg:h-screen dark:bg-gray-900 dark:text-white">
                 <Navbar />
                 <div className="flex w-full justify-end">
                     <button className="mr-10 border border-white bg-white px-4 py-2 hover:bg-gray-200" onClick={handleAddProblemClick}>
@@ -71,6 +75,7 @@ export const Problemtable = () => {
                         </tbody>
                     </table>
                 </div>
+            </div>
             </div>
         </ThemeContextProvider>
     );
