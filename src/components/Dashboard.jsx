@@ -8,7 +8,7 @@ export const Dashboard = () => {
         <ThemeContextProvider>
             <div className="flex">
                 <Sidebar />
-                <div className="h-full grow bg-gray-100 text-gray-900 lg:h-screen dark:bg-gray-900 dark:text-white">
+                <div className="h-full grow bg-gray-100 text-gray-900 lg:h-screen dark:bg-gray-900 dark:text-white duration-500">
                     <Navbar />
                     <Solvedstatus />
                 </div>

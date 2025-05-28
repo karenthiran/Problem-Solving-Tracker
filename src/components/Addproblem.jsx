@@ -108,7 +108,7 @@ export const Addproblem = () => {
 
     return (
         <ThemeContextProvider>
-            <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+            <div className="min-h-screen bg-gray-100 dark:bg-gray-900 duration-500">
                 <Navbar />
                 <form onSubmit={handleSubmit}>
                     <div className="px-4 py-2">
