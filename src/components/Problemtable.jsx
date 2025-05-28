@@ -43,36 +43,69 @@ export const Problemtable = () => {
                                     <th className="border border-green-500 px-4 py-2 text-center">
                                         Status
                                     </th>
+                                    <th className="border border-green-500 px-4 py-2 text-center">
+                                        Date
+                                    </th>
+                                    <th className="border border-green-500 px-4 py-2 text-center">
+                                        Problem tags
+                                    </th>
+                                    <th className="border border-green-500 px-4 py-2 text-center">
+                                        Modify
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="text-center hover:bg-green-400">
+                                <tr className="text-center hover:bg-gray-200 hover:text-gray-900">
                                     <td className="border border-yellow-200">001</td>
                                     <td className="border border-yellow-200">LinkedList</td>
                                     <td className="border border-yellow-200">Easy</td>
                                     <td className="border border-yellow-200">Leetcode</td>
                                     <td className="border border-yellow-200">Solved</td>
+                                    <td className="border border-yellow-200">12-01-2024</td>
+                                    <td className="border border-yellow-200">List HashTable Set</td>
+                                    <td className="border border-yellow-200">
+                                        <button className="border border-b hover:bg-orange-600 mr-2">Edit</button>
+                                        <button className="border border-b hover:bg-sky-700">Delete</button>
+                                    </td>
                                 </tr>
-                                <tr className="text-center hover:bg-green-400">
+                                <tr className="text-center hover:bg-gray-200 hover:text-gray-900">
                                     <td className="border border-yellow-200">001</td>
                                     <td className="border border-yellow-200">LinkedList</td>
                                     <td className="border border-yellow-200">Easy</td>
                                     <td className="border border-yellow-200">Leetcode</td>
                                     <td className="border border-yellow-200">Solved</td>
+                                    <td className="border border-yellow-200">12-01-2024</td>
+                                    <td className="border border-yellow-200">List HashTable Set</td>
+                                    <td className="border border-yellow-200">
+                                        <button className="border border-b hover:bg-orange-600 mr-2">Edit</button>
+                                        <button className="border border-b hover:bg-sky-700">Delete</button>
+                                    </td>
                                 </tr>
-                                <tr className="text-center hover:bg-green-400">
+                                <tr className="text-center hover:bg-gray-200 hover:text-gray-900">
                                     <td className="border border-yellow-200">001</td>
                                     <td className="border border-yellow-200">LinkedList</td>
                                     <td className="border border-yellow-200">Easy</td>
                                     <td className="border border-yellow-200">Leetcode</td>
                                     <td className="border border-yellow-200">Solved</td>
+                                    <td className="border border-yellow-200">12-01-2024</td>
+                                    <td className="border border-yellow-200">List HashTable Set</td>
+                                    <td className="border border-yellow-200">
+                                        <button className="border border-b hover:bg-orange-600 mr-2">Edit</button>
+                                        <button className="border border-b hover:bg-sky-700">Delete</button>
+                                    </td>
                                 </tr>
-                                <tr className="text-center hover:bg-green-400">
+                                <tr className="text-center hover:bg-gray-200 hover:text-gray-900">
                                     <td className="border border-yellow-200">001</td>
                                     <td className="border border-yellow-200">LinkedList</td>
                                     <td className="border border-yellow-200">Easy</td>
                                     <td className="border border-yellow-200">Leetcode</td>
                                     <td className="border border-yellow-200">Solved</td>
+                                    <td className="border border-yellow-200">12-01-2024</td>
+                                    <td className="border border-yellow-200">List HashTable Set</td>
+                                    <td className="border border-yellow-200">
+                                        <button className="border border-b hover:bg-orange-600">Edit</button>
+                                        <button className="border border-b hover:bg-sky-700 ml-2">Delete</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
