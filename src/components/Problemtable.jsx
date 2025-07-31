@@ -101,9 +101,9 @@ export const Problemtable = () => {
                                     <td className="border border-yellow-200">Leetcode</td>
                                     <td className="border border-yellow-200">Solved</td>
                                     <td className="border border-yellow-200">12-01-2024</td>
-                                    <td className="border border-yellow-200">List HashTable Set</td>
+                                    <td className="border border-yellow-200">List HashTable Set List HashTable Set</td>
                                     <td className="border border-yellow-200">
-                                        <button className="border border-b hover:bg-orange-600">Edit</button>
+                                        <button className="border border-b hover:bg-orange-600 bg-green-900">Edit</button>
                                         <button className="border border-b hover:bg-sky-700 ml-2">Delete</button>
                                     </td>
                                 </tr>
