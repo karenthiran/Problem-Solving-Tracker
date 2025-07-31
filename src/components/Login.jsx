@@ -53,7 +53,7 @@ export const Login = () => {
           <h1 style={{ fontFamily: 'Cambria Math, serif' }} className='text-5xl font-roboto font-bold text-white italic my-4'>
             welcome to DSA diary
           </h1>
-          <p className='text-2xl font-semibold text-white'>"Track your effort. Analyze your growth. Master problem-solving with DSA Diary."</p>
+          <p className='text-xl font-semibold text-white'>"Track your effort. Analyze your growth. Master problem-solving with DSA Diary."</p>
         </div>
         <img src={coverImage} className='w-full h-full object-cover' alt="Cover" />
         <p className="absolute bottom-0 left-0 right-0 text-lg p-4 text-center text-5xl text-gray-200 font-bold" style={{ fontFamily: 'Pacifico, cursive' }}>
